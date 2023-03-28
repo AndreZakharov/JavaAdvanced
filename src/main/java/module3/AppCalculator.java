@@ -15,11 +15,10 @@ public class AppCalculator {
             num1 = Double.parseDouble(bufferedReader.readLine());
             num2 = Double.parseDouble(bufferedReader.readLine());
             operation = bufferedReader.readLine();
-        } catch (NumberFormatException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (NumberFormatException | IOException e) {
             throw new RuntimeException(e);
         }
+
         Calculator calculator = new Calculator(num1,num2,operation);
         calculator.calculate();
         System.out.println("Result : " + calculator.getResult());
