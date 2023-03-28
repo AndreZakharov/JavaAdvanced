@@ -11,6 +11,6 @@ public class DefaultWrongOperation implements IOperation{
 
     @Override
     public double calculateOperation(double variable1, double variable2) {
-        throw new InputMismatchException("Invalid input value : " + erroneousStatement);
+        throw new InputMismatchException("Invalid input operation : " + erroneousStatement);
     }
 }

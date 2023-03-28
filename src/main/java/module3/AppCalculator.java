@@ -20,7 +20,8 @@ public class AppCalculator {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        Calculator calculator = new Calculator();
-        System.out.println("Result : " + calculator.calculate(num1,num2,operation));
+        Calculator calculator = new Calculator(num1,num2,operation);
+        calculator.calculate();
+        System.out.println("Result : " + calculator.getResult());
     }
 }
